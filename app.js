@@ -39,7 +39,7 @@ bot.on('message', function(msg){
 
       // delay 2s before send pic to user
       setTimeout(function() {
-        bot.sendPhoto(chatId, __dirname + "/images/snap1.png");
+        bot.sendPhoto(chatId, __dirname + "/images/snap.png");
       }, 2000);
     } else if(msg.text.indexOf(autoCapture) === 0){
       bot.sendMessage(chatId, "Screenshot will be send every 5 minutes")
@@ -50,7 +50,7 @@ bot.on('message', function(msg){
 
         // delay 2s before send pic to user
         setTimeout(() => {
-          bot.sendPhoto(chatId, __dirname + "/images/snap1.png");
+          bot.sendPhoto(chatId, __dirname + "/images/snap.png");
         }, 2000);
       }, 300000);
     }
@@ -59,7 +59,7 @@ bot.on('message', function(msg){
 
 // Function list
 function snap(){
-  screenshot(__dirname + "/images/snap1.png", function(err, complete){
+  screenshot(__dirname + "/images/snap.png", function(err, complete){
     if(err){
       console.log("Screenshot failed", err);
     } else{
